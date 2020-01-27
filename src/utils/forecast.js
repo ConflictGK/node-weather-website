@@ -9,7 +9,7 @@ const forecast = (latitude, longtitude , callback) => {
             callback('Unable to find location', undefined)
         } else {
             const currently = body.currently
-            callback(undefined, body.daily.data[0].summary + ' It is currently ' + currently.temperature + ' degrees out. There is a ' + currently.precipProbability + '% of rain')
+            callback(undefined, body.daily.data[0].summary + ' Η θερμοκρασία τώρα είναι ' + currently.temperature + ' βαθμοί Κελσίου. Πιθανότητα βροχής ' + currently.precipProbability + '%.')
         }
     })
 }
